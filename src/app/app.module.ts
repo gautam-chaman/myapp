@@ -10,6 +10,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgworksComponent } from './ngworks/ngworks.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularmetrialComponent } from './angularmetrial/angularmetrial.component';
+import { RouterModule,Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+
+
+const routes: Routes = [
+
+  {path:'',component:AppComponent},
+  {path:'home',component:HomeComponent}
+
+];
+
 
 @NgModule({
   declarations: [
@@ -18,11 +29,12 @@ import { AngularmetrialComponent } from './angularmetrial/angularmetrial.compone
     ContactComponent,
     ServiceComponent,
     NgworksComponent,
-    AngularmetrialComponent
+    AngularmetrialComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,RouterModule.forRoot(routes),
     NgbModule,
     BrowserAnimationsModule
   ],
