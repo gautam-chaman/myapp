@@ -12,12 +12,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularmetrialComponent } from './angularmetrial/angularmetrial.component';
 import { RouterModule,Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { DeleteComponent } from './delete/delete.component';
 
 
 const routes: Routes = [
 
   {path:'',component:AppComponent},
-  {path:'home',component:HomeComponent}
+  {path:'home',component:HomeComponent},
+  {path:'delet',component:DeleteComponent}
 
 ];
 
@@ -30,7 +32,8 @@ const routes: Routes = [
     ServiceComponent,
     NgworksComponent,
     AngularmetrialComponent,
-    HomeComponent
+    HomeComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
